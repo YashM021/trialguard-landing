@@ -67,13 +67,13 @@ body {
 .hero-logo {
   width: 355.48px;
   height: 137.61px;
-  margin-bottom: 80px;
+  margin-bottom: 65px;
 }
 
 /* ================= HERO TEXT ================= */
 
 .hero h1 {
-  font-size: 64px;
+  font-size: 75px;
   font-weight: 600;
   line-height: 1.12;
   max-width: 720px;
@@ -159,3 +159,4 @@ body {
   max-width: 900px;
   margin: 0 auto;
 }
+
