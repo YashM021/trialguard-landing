@@ -1,3 +1,5 @@
+/* ================= RESET ================= */
+
 * {
   margin: 0;
   padding: 0;
@@ -8,12 +10,11 @@
 
 body {
   font-family: 'Inter', system-ui, sans-serif;
-  background: #000000; /* solid black as requested */
+  background: #000000;
   color: #ffffff;
 }
 
-/* ================= BACKGROUND IMAGE ================= */
-/* Sticks to top, only spans hero height */
+/* ================= HERO BACKGROUND ================= */
 
 .page-bg {
   position: absolute;
@@ -26,7 +27,7 @@ body {
   background-image: url("assets/Curve.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center 74%; /* pushed down to sit under CTA */
+  background-position: center 74%;
 
   z-index: 0;
   pointer-events: none;
@@ -41,18 +42,16 @@ body {
 
   display: flex;
   justify-content: center;
-  align-items: flex-start;   /* 🔥 KEY CHANGE */
+  align-items: flex-start;
 
-  padding-top: 48px;         /* 🔥 REDUCES TOP GAP */
+  padding-top: 48px;
 }
-
-/* ================= HERO CONTENT ================= */
 
 .hero-content {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 
-  max-width: 820px;   /* tighter frame */
+  max-width: 820px;
   width: 100%;
   padding: 0 24px;
 
@@ -62,18 +61,18 @@ body {
   text-align: center;
 }
 
-/* ================= HERO LOGO ================= */
+/* HERO LOGO */
 
 .hero-logo {
   width: 355.48px;
   height: 137.61px;
-  margin-bottom: 65px;
+  margin-bottom: 36px;
 }
 
-/* ================= HERO TEXT ================= */
+/* HERO TEXT */
 
 .hero h1 {
-  font-size: 75px;
+  font-size: 64px;
   font-weight: 600;
   line-height: 1.12;
   max-width: 720px;
@@ -102,8 +101,6 @@ body {
   background-color: #0E101C;
   border-radius: 36px;
   border: 2px solid #70849C;
-
-  margin-top: 4px; /* slight overlap feel */
 }
 
 .email-bar input {
@@ -115,11 +112,6 @@ body {
   font-size: 18px;
   font-weight: 500;
   color: #ffffff;
-}
-
-.email-bar input::placeholder {
-  color: #ffffff;
-  opacity: 0.7;
 }
 
 .email-bar button {
@@ -136,27 +128,204 @@ body {
   cursor: pointer;
 }
 
-/* ================= CONTENT SECTIONS ================= */
+/* ================= PROBLEM ================= */
 
-.problem,
-.features,
-.comparison,
-.final-cta,
-.footer {
+.problem {
+  position: relative;
+  z-index: 2;
+  padding: 120px 24px;
+}
+
+.problem-container {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 540px;
+  gap: 64px;
+  align-items: start;
+}
+
+/* LEFT */
+
+.problem-text h2 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
+.problem-text p {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+.problem-text ul {
+  margin: 0 0 32px 20px;
+}
+
+.problem-text li {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.problem-note {
+  font-size: 20px;
+  color: #E1E1EB;
+  max-width: 520px;
+  line-height: 1.6;
+}
+
+/* RIGHT IMAGE */
+
+.problem-metrics {
+  display: flex;
+  justify-content: center;
+}
+
+.problem-image {
+  width: 540px;
+  height: 463px;
+  object-fit: contain;
+}
+
+/* ================= FEATURES ================= */
+
+.features {
+  position: relative;
+  padding: 120px 24px;
+  overflow: hidden; /* 🔥 IMPORTANT: section owns its background */
+}
+
+/* BACKGROUND IMAGES (SECTION SCOPED) */
+
+.features-bg {
+  position: absolute;
+  top: 0;
+
+  height: 100%;
+  width: auto;
+
+  z-index: 0;
+  pointer-events: none;
+}
+
+.features-bg.left {
+  left: -300px; /* adjusted to stay visible */
+}
+
+.features-bg.right {
+  right: -300px; /* adjusted to stay visible */
+}
+
+/* CONTENT */
+
+.features-container {
   position: relative;
   z-index: 1;
+
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.features-title {
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.features-grid {
+  display: flex;
+  justify-content: center;
+  gap: 145px;
+}
+
+.feature-item {
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.feature-icon {
+  width: 121px;
+  height: 102.02px;
+  margin-bottom: 24px;
+}
+
+.feature-item p {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* ================= COMPARISON ================= */
+
+.comparison {
+  position: relative;
+  z-index: 2;
+  padding: 120px 24px;
+}
+
+.comparison-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.comparison-title {
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+
+.comparison-card {
+  padding: 32px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.comparison-note {
+  margin-top: 48px;
+  text-align: center;
+  color: #B6B6C6;
+}
+
+/* ================= FINAL CTA ================= */
+
+.final-cta {
+  position: relative;
+  z-index: 2;
+  padding: 120px 24px;
+  text-align: center;
+}
+
+.final-cta-container {
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 /* ================= FOOTER ================= */
 
 .footer {
-  padding: 3rem 2rem;
-  text-align: center;
+  position: relative;
+  z-index: 2;
+  padding: 48px 24px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
 }
 
 .footer-container {
   max-width: 900px;
   margin: 0 auto;
 }
-
