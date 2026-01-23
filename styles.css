@@ -1,5 +1,4 @@
 /* ================= RESET ================= */
-
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +6,6 @@
 }
 
 /* ================= GLOBAL ================= */
-
 body {
   font-family: 'Inter', system-ui, sans-serif;
   background: #000000;
@@ -15,53 +13,40 @@ body {
 }
 
 /* ================= HERO BACKGROUND ================= */
-
 .page-bg {
   position: absolute;
   top: 0;
   left: 0;
-
   width: 100%;
   height: 968px;
-
   background-image: url("assets/Curve.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center 74%;
-
   z-index: 0;
   pointer-events: none;
 }
 
 /* ================= HERO ================= */
-
 .hero {
   position: relative;
   height: 968px;
-  width: 100%;
-
   display: flex;
   justify-content: center;
   align-items: flex-start;
-
   padding-top: 48px;
 }
 
 .hero-content {
-  position: relative;
   z-index: 2;
-
   max-width: 820px;
   width: 100%;
   padding: 0 24px;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
-
-/* HERO LOGO */
 
 .hero-logo {
   width: 355.48px;
@@ -69,13 +54,10 @@ body {
   margin-bottom: 36px;
 }
 
-/* HERO TEXT */
-
 .hero h1 {
   font-size: 64px;
   font-weight: 600;
   line-height: 1.12;
-  max-width: 720px;
   margin-bottom: 18px;
 }
 
@@ -83,21 +65,16 @@ body {
   font-size: 22px;
   font-weight: 500;
   color: #E1E1EB;
-  line-height: 1.45;
-  max-width: 700px;
   margin-bottom: 26px;
 }
 
-/* ================= EMAIL BAR ================= */
-
+/* ================= EMAIL BAR (REUSED) ================= */
 .email-bar {
   width: 640px;
   height: 64px;
-
   display: flex;
   align-items: center;
   padding-left: 20px;
-
   background-color: #0E101C;
   border-radius: 36px;
   border: 2px solid #70849C;
@@ -108,50 +85,37 @@ body {
   background: transparent;
   border: none;
   outline: none;
-
-  font-size: 18px;
-  font-weight: 500;
   color: #ffffff;
+  font-size: 18px;
 }
 
 .email-bar button {
   width: 240px;
   height: 56px;
-
   background: transparent;
   border-radius: 32px;
-  border: 2px solid rgba(255, 255, 255, 0.5);
-
-  font-size: 18px;
-  font-weight: 600;
+  border: 2px solid rgba(255,255,255,0.5);
   color: #ffffff;
+  font-weight: 600;
   cursor: pointer;
 }
 
 /* ================= PROBLEM ================= */
-
 .problem {
-  position: relative;
-  z-index: 2;
   padding: 120px 24px;
 }
 
 .problem-container {
   max-width: 1200px;
   margin: 0 auto;
-
   display: grid;
   grid-template-columns: 1fr 540px;
   gap: 64px;
-  align-items: start;
 }
-
-/* LEFT */
 
 .problem-text h2 {
   font-size: 48px;
   font-weight: 700;
-  line-height: 1.2;
   margin-bottom: 24px;
 }
 
@@ -162,26 +126,13 @@ body {
 }
 
 .problem-text ul {
-  margin: 0 0 32px 20px;
-}
-
-.problem-text li {
-  font-size: 20px;
-  margin-bottom: 8px;
+  margin-left: 20px;
+  margin-bottom: 32px;
 }
 
 .problem-note {
   font-size: 20px;
   color: #E1E1EB;
-  max-width: 520px;
-  line-height: 1.6;
-}
-
-/* RIGHT IMAGE */
-
-.problem-metrics {
-  display: flex;
-  justify-content: center;
 }
 
 .problem-image {
@@ -191,40 +142,30 @@ body {
 }
 
 /* ================= FEATURES ================= */
-
 .features {
   position: relative;
   padding: 120px 24px;
-  overflow: hidden; /* 🔥 IMPORTANT: section owns its background */
+  overflow: hidden;
 }
-
-/* BACKGROUND IMAGES (SECTION SCOPED) */
 
 .features-bg {
   position: absolute;
   top: 0;
-
   height: 100%;
-  width: auto;
-
-  z-index: 0;
   pointer-events: none;
 }
 
 .features-bg.left {
-  left: -300px; /* adjusted to stay visible */
+  left: -300px;
 }
 
 .features-bg.right {
-  right: -300px; /* adjusted to stay visible */
+  right: -300px;
 }
-
-/* CONTENT */
 
 .features-container {
   position: relative;
   z-index: 1;
-
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -244,30 +185,24 @@ body {
 
 .feature-item {
   max-width: 320px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   text-align: center;
 }
 
 .feature-icon {
   width: 121px;
-  height: 102.02px;
+  height: 102px;
   margin-bottom: 24px;
 }
 
 .feature-item p {
   font-size: 24px;
   font-weight: 500;
-  line-height: 1.5;
 }
 
 /* ================= COMPARISON ================= */
-
 .comparison {
-  position: relative;
-  z-index: 2;
   padding: 120px 24px;
+  text-align: center;
 }
 
 .comparison-container {
@@ -278,50 +213,52 @@ body {
 .comparison-title {
   font-size: 48px;
   font-weight: 700;
-  text-align: center;
-  margin-bottom: 64px;
+  margin-bottom: 30px;
 }
 
-.comparison-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
-}
-
-.comparison-card {
-  padding: 32px;
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+.comparison-image {
+  width: 1028px;
+  height: 357.47px;
+  max-width: 100%;
+  margin-bottom: 20px;
 }
 
 .comparison-note {
-  margin-top: 48px;
-  text-align: center;
-  color: #B6B6C6;
+  font-size: 24px;
+  font-weight: 500;
 }
 
 /* ================= FINAL CTA ================= */
-
 .final-cta {
-  position: relative;
-  z-index: 2;
   padding: 120px 24px;
   text-align: center;
 }
 
 .final-cta-container {
-  max-width: 600px;
+  max-width: 820px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.final-cta-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.final-cta-subtext {
+  font-size: 24px;
+  font-weight: 500;
+  color: #E1E1EB;
+  margin-bottom: 36px;
 }
 
 /* ================= FOOTER ================= */
-
 .footer {
-  position: relative;
-  z-index: 2;
   padding: 48px 24px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255,255,255,0.1);
   text-align: center;
 }
 
