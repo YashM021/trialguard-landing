@@ -7,16 +7,17 @@
   <!-- Inter font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
 
-  <!-- GLOBAL BACKGROUND IMAGE -->
+  <!-- HERO BACKGROUND CURVE -->
   <div class="page-bg"></div>
 
+  <!-- ================= HERO ================= -->
   <header class="hero">
     <div class="hero-content">
 
@@ -28,7 +29,7 @@
       </h1>
 
       <p>
-        TrialGuard quietly detects and blocks repeat trial abuse<br />
+        TrialGuard quietly detects and blocks repeat trial abuse
         without hurting real users.
       </p>
 
@@ -40,11 +41,13 @@
     </div>
   </header>
 
+  <!-- ================= PROBLEM ================= -->
   <section class="problem">
     <div class="problem-container">
 
+      <!-- LEFT TEXT -->
       <div class="problem-text">
-        <h2>The problem no one wants to talk about</h2>
+        <h2>The problem no one<br />wants to talk about</h2>
 
         <p>Free trials are easy to exploit.</p>
 
@@ -63,54 +66,68 @@
         </p>
       </div>
 
+      <!-- RIGHT IMAGE -->
       <div class="problem-metrics">
-        <div class="metric-card">
-          <span class="metric-label">Abusive Attempts</span>
-          <span class="metric-value">143</span>
-        </div>
-
-        <div class="metric-card">
-          <span class="metric-label">Signups Checked</span>
-          <span class="metric-value">1,284</span>
-        </div>
-
-        <div class="metric-card">
-          <span class="metric-label">Risk Score</span>
-          <span class="metric-value">82 / 100</span>
-        </div>
+        <img
+          src="assets/ss.png"
+          alt="TrialGuard detection example"
+          class="problem-image"
+        />
       </div>
 
     </div>
   </section>
 
+  <!-- ================= FEATURES ================= -->
   <section class="features">
+
+    <!-- FIXED BACKGROUND GLOWS -->
+    <img src="assets/bg-left.png" class="features-bg left" alt="" />
+    <img src="assets/bg-right.png" class="features-bg right" alt="" />
+
     <div class="features-container">
+
       <h2 class="features-title">What TrialGuard does</h2>
 
       <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon"></div>
-          <p>Detects repeat trial abuse using multiple correlated signals</p>
+
+        <div class="feature-item">
+          <img src="assets/feature-1.png" alt="" class="feature-icon" />
+          <p>
+            Detects repeat trial abuse using
+            multiple correlated signals
+          </p>
         </div>
 
-        <div class="feature-card">
-          <div class="feature-icon"></div>
-          <p>Blocks or limits abusers directly from the TrialGuard dashboard</p>
+        <div class="feature-item">
+          <img src="assets/feature-2.png" alt="" class="feature-icon" />
+          <p>
+            Blocks or limits abusers directly
+            from the TrialGuard dashboard
+          </p>
         </div>
 
-        <div class="feature-card">
-          <div class="feature-icon"></div>
-          <p>Keeps your trial data clean, accurate, and trustworthy</p>
+        <div class="feature-item">
+          <img src="assets/feature-3.png" alt="" class="feature-icon" />
+          <p>
+            Keeps your trial data clean,
+            accurate, and trustworthy
+          </p>
         </div>
+
       </div>
+
     </div>
   </section>
 
+  <!-- ================= COMPARISON ================= -->
   <section class="comparison">
     <div class="comparison-container">
+
       <h2 class="comparison-title">Can’t my devs just build this?</h2>
 
       <div class="comparison-grid">
+
         <div class="comparison-card">
           <h3>Typical dev house</h3>
           <ul>
@@ -132,16 +149,20 @@
             <li>Keeps trial data clean and trustworthy</li>
           </ul>
         </div>
+
       </div>
 
       <p class="comparison-note">
         Your team can build rules. TrialGuard handles the system behind them.
       </p>
+
     </div>
   </section>
 
+  <!-- ================= FINAL CTA ================= -->
   <section class="final-cta">
     <div class="final-cta-container">
+
       <h2>Join the TrialGuard waitlist</h2>
       <p>Get early access when TrialGuard opens for founders. No spam. No noise.</p>
 
@@ -149,14 +170,25 @@
         <input type="email" placeholder="Your email..." />
         <button>Join the waitlist</button>
       </div>
+
     </div>
   </section>
 
+  <!-- ================= FOOTER ================= -->
   <footer class="footer">
     <div class="footer-container">
-      <p>TrialGuard helps SaaS founders stop free trial abuse without hurting real users.</p>
-      <p>Built by a founder who faced this problem firsthand.</p>
+
+      <p>
+        TrialGuard helps SaaS founders stop free trial abuse
+        without hurting real users.
+      </p>
+
+      <p>
+        Built by a founder who faced this problem firsthand.
+      </p>
+
       <small>© 2026 TrialGuard</small>
+
     </div>
   </footer>
 
