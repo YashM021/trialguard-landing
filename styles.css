@@ -8,21 +8,21 @@
 /* ================= GLOBAL ================= */
 body {
   font-family: 'Inter', system-ui, sans-serif;
-  background: #000000;
   color: #ffffff;
+  background: #000000; /* hero stays pure black */
 }
 
-/* ================= HERO BACKGROUND ================= */
+/* ================= HERO BACKGROUND IMAGE ================= */
 .page-bg {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+  inset: 0;
   height: 968px;
+
   background-image: url("assets/Curve.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center 74%;
+  background-position: center 60%;
+
   z-index: 0;
   pointer-events: none;
 }
@@ -31,30 +31,39 @@ body {
 .hero {
   position: relative;
   height: 968px;
+  width: 100%;
+  overflow: hidden;
+
   display: flex;
   justify-content: center;
   align-items: flex-start;
   padding-top: 48px;
 }
 
+/* ================= HERO CONTENT ================= */
 .hero-content {
+  position: relative;
   z-index: 2;
+
   max-width: 820px;
   width: 100%;
   padding: 0 24px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
 
+/* ================= LOGO ================= */
 .hero-logo {
   width: 355.48px;
   height: 137.61px;
-  margin-bottom: 36px;
 }
 
+/* ================= HERO TEXT ================= */
 .hero h1 {
+  margin-top: 120px;
   font-size: 64px;
   font-weight: 600;
   line-height: 1.12;
@@ -64,50 +73,95 @@ body {
 .hero p {
   font-size: 22px;
   font-weight: 500;
-  color: #E1E1EB;
+  color: #D6D2E5;
   margin-bottom: 26px;
 }
 
-/* ================= EMAIL BAR (REUSED) ================= */
+/* ================= EMAIL BAR ================= */
 .email-bar {
   width: 640px;
   height: 64px;
+
   display: flex;
   align-items: center;
   padding-left: 20px;
-  background-color: #0E101C;
+
+  background: rgba(14, 16, 28, 0.9);
+  backdrop-filter: blur(10px);
+
   border-radius: 36px;
-  border: 2px solid #70849C;
+  border: 1px solid rgba(255,255,255,0.25);
 }
 
+/* INPUT */
 .email-bar input {
   flex: 1;
   background: transparent;
   border: none;
   outline: none;
+
   color: #ffffff;
   font-size: 18px;
 }
 
+.email-bar input::placeholder {
+  color: #9C9AAF;
+;
+}
+
+/* BUTTON – RADIAL GRADIENT */
 .email-bar button {
   width: 240px;
   height: 56px;
-  background: transparent;
+
   border-radius: 32px;
-  border: 2px solid rgba(255,255,255,0.5);
+  border: none;
+
+  background: radial-gradient(
+    circle at 20% 20%,
+    #F0F9FF 0%,
+    #4853E1 40%,
+    #C35380 84%,
+    #F7842F 100%
+  );
+
   color: #ffffff;
+  font-size: 16px;
   font-weight: 600;
+
   cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.email-bar button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(72, 83, 225, 0.35);
+}
+
+/* ================================================= */
+/* 🔥 GRADIENT STARTS ONLY AFTER HERO 🔥 */
+/* ================================================= */
+
+.page-gradient {
+  background: linear-gradient(
+    180deg,
+    #000000 0%,
+    #0B0614 20%,
+    #160A2A 45%,
+    #0E0718 70%,
+    #000000 100%
+  );
 }
 
 /* ================= PROBLEM ================= */
 .problem {
-  padding: 120px 24px;
+  padding: 140px 24px;
 }
 
 .problem-container {
   max-width: 1200px;
   margin: 0 auto;
+
   display: grid;
   grid-template-columns: 1fr 540px;
   gap: 64px;
@@ -130,9 +184,15 @@ body {
   margin-bottom: 32px;
 }
 
+.problem-text li {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
 .problem-note {
   font-size: 20px;
-  color: #E1E1EB;
+  color: #C8C4DD;
+  line-height: 1.6;
 }
 
 .problem-image {
@@ -144,7 +204,7 @@ body {
 /* ================= FEATURES ================= */
 .features {
   position: relative;
-  padding: 120px 24px;
+  padding: 140px 24px;
   overflow: hidden;
 }
 
@@ -166,6 +226,7 @@ body {
 .features-container {
   position: relative;
   z-index: 1;
+
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -197,11 +258,13 @@ body {
 .feature-item p {
   font-size: 24px;
   font-weight: 500;
+  color: #E6E3F5;
+  line-height: 1.5;
 }
 
 /* ================= COMPARISON ================= */
 .comparison {
-  padding: 120px 24px;
+  padding: 140px 24px;
   text-align: center;
 }
 
@@ -226,17 +289,19 @@ body {
 .comparison-note {
   font-size: 24px;
   font-weight: 500;
+  color: #CFCBE3;
 }
 
 /* ================= FINAL CTA ================= */
 .final-cta {
-  padding: 120px 24px;
+  padding: 140px 24px;
   text-align: center;
 }
 
 .final-cta-container {
   max-width: 820px;
   margin: 0 auto;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -251,18 +316,26 @@ body {
 .final-cta-subtext {
   font-size: 24px;
   font-weight: 500;
-  color: #E1E1EB;
+  color: #D6D2E5;
   margin-bottom: 36px;
 }
 
 /* ================= FOOTER ================= */
 .footer {
-  padding: 48px 24px;
-  border-top: 1px solid rgba(255,255,255,0.1);
+  padding: 56px 24px;
+  border-top: 1px solid rgba(255,255,255,0.08);
   text-align: center;
 }
 
 .footer-container {
   max-width: 900px;
   margin: 0 auto;
+}
+
+.footer p {
+  color: #BDB8D6;
+}
+
+.footer small {
+  color: #7D7898;
 }
